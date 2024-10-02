@@ -3,7 +3,7 @@
 shoppinglist = ["Shoppinglist"]
 print(shoppinglist)
 
-# Wir fordern den Kunden auf, ein Produkt auszuwählen!
+# Funktion zum Hinzufügen von Artikeln!
 
 def add_item():
     item = input("Please enter your item")
@@ -11,7 +11,31 @@ def add_item():
     shoppinglist.append(item)
 add_item()
 
-#Der Artikel wird der Liste hinzugefügt
+#Funktion zum Anzeigen der Einkaufsliste
 
-print(shoppinglist)
+def show_shoppinglist():
+    if shoppinglist:
+        print("Deine Einkaufsliste:")
+        for item in shoppinglist:
+            print(f"{item}")
+
+        else:
+            print("Deine Eikaufsliste ist leer")
+
+show_shoppinglist()                
      
+
+#Main function
+def main_function():
+    while True:
+        print("___Einkaufsliste___")
+        print("1. Artikel zur Einkaufsliste hinzufügen")
+        print("2. Einkaufsliste anzeigen")
+        print("3. Programm beenden")
+        choice = input("Bitte treffen Sie Ihre Auswahl")
+        if choice == "1":
+            add_item()
+        elif choice == "2":
+            show_shoppinglist:() 
+        elif choice == "3":
+            print("Programm wird beendet! AufWiedersehen")
